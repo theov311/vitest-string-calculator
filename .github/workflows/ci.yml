@@ -31,7 +31,7 @@ jobs:
         if: always()
         run: |
           mkdir -p test-reports
-          npm test -- --json --outputFile=test-reports/report.json
+          npm test -- --reporter=json --outputFile=test-reports/report.json
           
       - name: Upload test report
         uses: actions/upload-artifact@v4
